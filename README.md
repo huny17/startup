@@ -6,43 +6,62 @@
 
 ### Elevator Pitch
 
-Are you wanting to test your odds? Mising carnival games? Or just bored and looking for a new game? Cups of Chance is a simple game that will cure all three ailments. Once logged in a member will be given the chance to pick a cup and see what fortune they get. Once a cup is chosen a fortune will be revealed. This fortune can range from Good Luck, Mediocre Luck, to Bad Luck. Which doens't change much.
+Are you wanting to test your odds? Missing carnival games? Or just bored and looking for a new game? Cups of Fortune is a simple game that will cure all three ailments. Once logged in a member will be given the chance to pick a cup and see what fortune they get. Once a cup is chosen a fortune will be revealed. This fortune can range from Good Luck, Mediocre Luck, to Bad Luck. Which doens't change much.
 
 ...unless you believe in superstitions?
 
 ### Design
 
+Picture goes here
+
 ### Key Features
 + Login Screen to keep track of Luck Meters
-+ Three Cups
-+ Luck Meter
++ Three Cups to choose from
++ Luck Meter, keeps track of user's luck
 
 ### Technologies
-+ HTML - Uses correct HTML structure for application. Two HTML pages. One for login and one for voting. Hyperlinks to choice artifact.
++ HTML 
+  - Structure of Website
 
-+ CSS - Application styling that looks good on different screen sizes, uses good whitespace, color choice and contrast.
++ CSS 
+  - Create polished look
+  - Colors
+  - Movement
+  - Beautifier
 
-+ JavaScript - Provides login, choice display, applying votes, display other users votes, backend endpoint calls.
++ JavaScript 
+  - Allows interaction
+  - Making it a fun game instead of a pretty picture 
+  - Let's users pick a cup
 
-+ React - Single page application with views componentized and reactive to user's actions.
++ React 
+  - Side effects of users' actions
+  - what happens after a user interacts with website
 
-+ Service - Backend service with endpoints for:
-  - Account Info
-        - Username & Password
-        - Accessing Lucky Meter
-        - Saving updated Luck Points
++ Web Service 
+  - Keeps Account Info:
+      - Username & Password
+      - Accessing Lucky Meter
+    - Saving updated Luck Points
+    
++ Authentication
+  - Prompt's login
+  - Displays Users' names
 
-+ DB/Login - Store users, choices, and votes in database. Register and login users. Credentials securely stored in database. Can't vote unless authenticated.
-
-+ WebSocket - As each user votes, their votes are broadcast to all other users.
++ WebSocket 
+  - Allows users to interact with each other
+  - Share Lucky Meters?
+  - Exchange Luck?
 
 ## HTML Deliveraable
-## CSS Deliverable
-## React Delverable
-## Service Deliverable
-## DB/Login Deliverble
 
-Luck Meter, keeps track of user's luck
+## CSS Deliverable
+
+## React Delverable
+
+## Service Deliverable
+
+## DB/Login Deliverble
 
 ## WebSocket Deliverable
 
