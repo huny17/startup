@@ -3,9 +3,7 @@ Startup BYU CS260
 [Note Paper](docs/notes.md)
 
 #Cups of Fortune
-
 #Specification Deliverable
-
 ##Elevator Pitch
 
     Are you wanting to test your odds? Mising carnival games? Or just bored and looking for a new game? Cups of Chance is a simple game that will cure all three ailments. Once logged in a member will be given the chance to pick a cup and see what fortune they get. Once a cup is chosen a fortune will be revealed. This fortune can range from Good Luck, Mediocre Luck, to Bad Luck. Which doens't change much.
@@ -14,9 +12,9 @@ Startup BYU CS260
 
 ##Design
 ##Key Features
-    +Login Screen to keep track of Luck Meters
-    +Three Cups
-    +Luck Meter
++Login Screen to keep track of Luck Meters
++Three Cups
++Luck Meter
 
 ##Technologies
     +HTML - Uses correct HTML structure for application. Two HTML pages. One for login and one for voting. Hyperlinks to choice artifact.
