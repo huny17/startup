@@ -12,7 +12,7 @@ Are you wanting to test your odds? Missing carnival games? Or just bored and loo
 
 ### Design
 
-Picture goes here
+![picture of a sketched out webpage and icons](pageDesign.jpg)
 
 ### Key Features
 + Login Screen to keep track of Luck Meters
@@ -39,10 +39,10 @@ Picture goes here
   - what happens after a user interacts with website
 
 + Web Service 
-  - Keeps Account Info:
-      - Username & Password
-      - Accessing Lucky Meter
-    - Saving updated Luck Points
+  + Keeps Account Info:
+    + Username & Password
+    + Accessing Lucky Meter
+    + Saving updated Luck Points
     
 + Authentication
   - Prompt's login
