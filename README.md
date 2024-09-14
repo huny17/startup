@@ -1,4 +1,4 @@
-# startup
+# Startup
 
 ## Cups of Fortune
 
@@ -6,7 +6,7 @@
 
 ### Elevator Pitch
 
-Are you wanting to test your odds? Missing carnival games? Or just bored and looking for a new game? Cups of Fortune is a simple game that will cure all three ailments. Once logged in a member will be given the chance to pick a cup and see what fortune they get. Once a cup is chosen a fortune will be revealed. This fortune can range from Good Luck, Mediocre Luck, to Bad Luck. Which doens't change much.
+Are you wanting to test your odds? Missing carnival games? Or just bored and looking for a new game? Cups of Fortune is a simple game that will cure all three ailments. Once logged in a member will be given the chance to pick a cup and see what fortune they get. Once a cup is chosen a fortune will be revealed. This fortune can range from Good Luck, Mediocre Luck, to Bad Luck. Which doesn't change much.
 
 ...unless you believe in superstitions?
 
@@ -15,9 +15,11 @@ Are you wanting to test your odds? Missing carnival games? Or just bored and loo
 ![picture of a sketched out webpage and icons](pageDesign.jpg)
 
 ### Key Features
-+ Login Screen to keep track of Luck Meters
++ Login Screen
 + Three Cups to choose from
 + Luck Meter, keeps track of user's luck
++ Total luck collected from the User
++ Score tracker between users (can display Luck Points to other users)
 
 ### Technologies
 + HTML 
