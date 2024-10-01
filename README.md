@@ -55,7 +55,18 @@ Are you wanting to test your odds? Missing carnival games? Or just bored and loo
   - Share Lucky Meters?
   - Exchange Luck?
 
-## HTML Deliveraable
+## HTML Deliverable
+-index
+  -login screen
+  -asks for email and password
+-mainScreen
+  -the game will happen here
+-luckMeter
+  -keeps track of luck scores
+-info
+  -synopsis of what the website is
+  -with disclaimer about not actually effecting luck
+
 
 ## CSS Deliverable
 
