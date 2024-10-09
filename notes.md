@@ -194,3 +194,262 @@ Basic writing and formatting syntax
 
     Disbling Markdown rendering
         When viewing a Markdown file, you can click Code at the top of the file to disable Markdown rendering and view the file's source instead.
+
+
+JAVASCRIPT WALK THROUGH________________________________________ 
+---------------------------------------------------------------
+
+Conditionals--------------
+    - for loops
+    - switch statements
+            - need to break after ea. case
+    - 
+
+Functions-------------
+    -
+
+    EXAMPLE
+
+        function hello(who) {
+        return 'hello ' + who;
+        }
+
+        console.log(hello('world'));
+        // OUTPUT: hello world
+
+    function functions() {
+    debugger;
+
+    // inner function
+    function f() {
+        return 1;
+    }
+    console.log(f());
+
+    // anonymous function with parameters and return value
+    f = function (i) {
+        return i;
+    };
+    console.log(f(3));
+
+    // no return value
+    f = function (i) {
+        i;
+    };
+    console.log(f(5));
+
+    // optional parameters
+    f = function (a, b, c = 'rat') {
+        return [a, b, c];
+    };
+    console.log(f(1));
+
+    return arrowFunctions;
+    }
+
+    // single line with implicit return, inherits this binding
+    function arrowFunctions() {
+    debugger;
+
+    const arrow = () => 1;
+
+    const arrowWithBlock = (a) => {
+        a;
+    };
+
+    const arrowWithReturn = (a) => {
+        return a;
+    };
+
+    console.log(arrow(), arrowWithBlock(2), arrowWithReturn(3));
+
+    return closures;
+    }
+
+Strings---------------------
+
+function strings() {
+  debugger;
+
+  let s = 'Cats Dogs Rats Mice'; // string literal
+  s = new String('Cats Dogs Rats Mice'); // string object
+
+  console.log('casefold: ', s.toUpperCase(), s.toLowerCase());
+  console.log('split: ', s.split(' '));
+  console.log('endsWith: ', s.endsWith('Mice'));
+  console.log('replace: ', s.replace('Dogs', 'Puppies'));
+  console.log('slice: ', s.slice(3, 7));
+
+  return regex;
+}
+
+Arrays-------------------
+(Potentially helpful for HW)
+
+        function arrays() {
+        debugger;
+
+        let numbers = [];
+        for (let i = 1; i < 11; i++) {
+            numbers.push(i);
+        }
+        console.log('push 10: ', numbers);
+        console.log('pop: ', numbers.pop());
+
+        console.log('numbers[1]:', numbers[1]);
+        console.log('slice:', numbers.slice(2, 5));
+        console.log('length:', numbers.length);
+
+        for (let entry of numbers) {
+            console.log(entry);
+            if (entry == 3) break;
+        }
+
+        return arrayOperations;
+        }
+
+    Array Operations------
+
+            function arrayOperations() {
+            debugger;
+
+            let numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+
+            console.log(
+                'map',
+                numbers.map((n) => n * 100)
+            );
+            console.log(
+                'reduce',
+                numbers.reduce((a, c) => a + c)
+            );
+            console.log(
+                'forEach',
+                numbers.forEach((n) => console.log(n % 2))
+            );
+            console.log(
+                'filter',
+                numbers.filter((n) => n % 2)
+            ); //(5) [1,3,5,7,9]
+            console.log(
+                'some',
+                numbers.some((n) => n > 5)
+            );
+
+            return exceptions;
+            }
+
+Objects------------------
+
+function objects() {
+  debugger;
+
+  let obj = {
+    animal: 'fish',
+  };
+
+  obj.count = 3;
+  obj.location = {
+    cities: ['utah', 'new york'],
+    origin: 'ocean',
+  };
+  obj.print = function () {
+    return `${this.animal} live in ${this.location.cities.join(' and ')}`;
+  };
+
+    //this = object that we're in should have animal key, use it.
+    //${} value of it, evaluate it and replace with value
+    //`` return as string
+    //~dictionary or class
+
+
+  console.log(obj);
+  console.log(obj.animal);
+  console.log(obj.print());
+
+  // iterator of properties
+  for (const property in obj) {
+    console.log(`name:${property}, value:${obj[property]}`);
+  }
+
+  for (const value of Object.keys(obj)) {
+    console.log(`value:${value}`);
+  }
+
+  return spread;
+}
+
+
+json--------------------------
+
+function json() {
+  debugger;
+
+  const obj = {
+    name: 'tina',
+    alive: true,
+    print: () => `${this.name} is ${this.alive}`,
+  };
+
+        //json: ("name":"tina","alive": true) 
+
+  console.log('object: ', obj);
+
+  const objText = JSON.stringify(obj);
+  console.log('json: ', objText);
+  console.log('rehydrate: ', JSON.parse(objText));
+
+  return classes;
+}
+
+Classes-------------------
+
+function classes() {
+  debugger;
+
+  // base class
+  class Location {
+    static defaultPlace = 'east';
+
+    constructor(location) {
+      this.location = location || Location.defaultPlace;
+    }
+  }
+
+    //Capital L, Location = use default if something not passed in
+
+    //_ ,means private but not reinforced. Not supposed to interact directly, need authoization
+    //#names
+
+  // derived class
+  class Beach extends Location {
+    constructor(name, location, weather = 'sunny') {
+      super(location);
+      this.name = name;
+      this._weather = weather;
+    }
+
+    get weather() {
+      return this._weather;
+    }
+
+    set weather(weather) {
+      this._weather = weather;
+    }
+  }
+
+  const sunsetBeach = new Beach('Sunset', 'north', 'rainy');
+  sunsetBeach.weather = 'snowing';
+  const beaches = [sunsetBeach, new Beach('Kailua')];
+
+  for (let beach of beaches) {
+    console.log(
+      `${beach.weather} weather at ${beach.name} beach on the ${beach.location} shore`
+    );
+  }
+
+  return compatibility;
+}
+
+
+
