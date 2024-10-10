@@ -35,6 +35,6 @@ main{
 }
 
 footer{
-	align items: right;
+	align-items: right;
 	color: #51414F;
 }
