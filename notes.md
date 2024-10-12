@@ -196,7 +196,7 @@ Basic writing and formatting syntax
         When viewing a Markdown file, you can click Code at the top of the file to disable Markdown rendering and view the file's source instead.
 
 
-JAVASCRIPT WALK THROUGH________________________________________ 
+___JAVASCRIPT WALK THROUGH________________________________________ 
 ---------------------------------------------------------------
 
 Conditionals--------------
@@ -451,5 +451,119 @@ function classes() {
   return compatibility;
 }
 
+Exceptions-------------------------
+    function exceptions() {
+    debugger;
 
+    try {
+        (() => {
+        throw 'trouble in river city';
+        })();
+    } catch (error) {
+        console.log('error: ' + error);
+    } finally {
+        console.log('finally!');
+    }
+
+    return templateLiterals;
+    }
+
+    -not a lot/for common errors
+    -specifically for exceptions
+
+Spread--------------------------------
+    function spread() {
+    debugger;
+
+    // spread
+    let input = [1, 2, 3];
+    input = [...input, 4, 5, 6];
+    console.log(input);
+
+    let base = { a: 'rat', b: 'cat' };
+    console.log({ c: 'dog', ...base, d: 'bird' });
+
+    // rest (variadic)
+    const sumAndMultiply = (multiplier, ...numbers) => {
+        console.log(numbers);
+        return numbers.reduce((a, n) => a + multiplier * n);
+    };
+
+    console.log(sumAndMultiply(10, ...input, 7, 8));
+
+    return objectArrayOperations;
+    }
+
+    -pulls arrays apart
+    -also objects
+    - ". . ." same syntax for spreading or resting an array
+
+Destructuring Arrays-------------
+    function destructuringArrays() {
+    debugger;
+
+    let x, y, z;
+
+    const a = [1, 2];
+    x = a;
+    console.log(x);
+
+    [x] = a;
+    console.log(x);
+
+    [x, y] = a;
+    console.log(x, y);
+
+    [x, y, z] = a;
+    console.log(x, y, z);
+
+    [x, y, z = 100] = a;
+    console.log(x, y, z);
+
+    [x, , y, ...z] = [1, 2, 3, 4, 5, 6, 7];
+    console.log(x, y, z);
+
+    return destructuringParameters;
+    }
+
+___DOM_______________________________
+
+Document---------
+
+    function wo(msg) {
+    // Interact with the DOM
+    const output = document.querySelector('button');
+    output.innerText = msg;
+    }
+
+    -changed start button to say waffle
+    -manipulated the DOM
+    -func is called "querySelector".
+    -points to first button in tree and passes msg in
+    -document.querySelectorAll('button') -> string of all the buttons
+
+Document Obj Model (DOM)
+-Tree structured object
+-html -> body ->  (P-> (test1 & (span -> )) & P ->text2.)
+
+<!-- Code injected by live-server -->
+<script></script>
+    -added because it is not actually deployed but is a reiview so VS code needs to have script to run the preview
+
+Dom Manipulation
+    fucntion displayElement(el) {
+        console.log (el.tagName);
+        for(const child of el.children){
+            displayElement(child);
+        }
+
+    }
+
+    -tagName = root
+    -find all the children of the children recursively
+    
+
+Event Handlers
+
+LocalStorage
 
