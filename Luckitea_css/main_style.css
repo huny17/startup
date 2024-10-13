@@ -10,6 +10,7 @@ main{
 		width: 600;
 		height: 500;
 		color: #51414F;
+		text-decoration: none;
 
 	
 }
@@ -25,9 +26,18 @@ menu li{
 	list-style-type: none;
 	margin: 0;
 	padding: 0;
+	background-color: #51414F;
+	list-style-type: none;
+	display:inline-block;
+    border:1px solid #51414F;
+    padding: 5px;
 
 }
 
+menu li a{
+	text-decoration: none;
+	color: #FFFFFF;
+}
 
 main{
   flex: 1;
