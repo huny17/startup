@@ -20,15 +20,15 @@ header{
 
   
 
-nav li{
+menu li{
     color: #51414F;
 	list-style-type: none;
 
 }
 
-nav{
+menu{
 	color: #51414F;
-	
+	list-style-type: none;
 	margin: 0;
 	padding: 0;
 }
