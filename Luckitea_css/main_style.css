@@ -23,15 +23,11 @@ header{
 menu li{
     color: #51414F;
 	list-style-type: none;
-
-}
-
-menu{
-	color: #51414F;
-	list-style-type: none;
 	margin: 0;
 	padding: 0;
+
 }
+
 
 main{
   flex: 1;
