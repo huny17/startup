@@ -70,6 +70,12 @@ Are you wanting to test your odds? Missing carnival games? Or just bored and loo
 
 ## CSS Deliverable
 
++CSS Sheet
+  - Color scheme
+  - flex
+  - bootstrap
+  - Clickable images of Teacups
+
 ## React Delverable
 
 ## Service Deliverable
