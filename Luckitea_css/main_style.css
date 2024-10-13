@@ -5,7 +5,7 @@ body{
 }
 
 main{
-		background-image: url('../teaBack.png');
+		background-image: url('teaBack.png');
 		background-size: 400px;
 		width: 600;
 		height: 500;
@@ -22,10 +22,15 @@ header{
 
 nav li{
     color: #51414F;
+	list-style-type: none;
+
 }
 
 nav{
 	color: #51414F;
+	
+	margin: 0;
+	padding: 0;
 }
 
 main{
