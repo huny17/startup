@@ -39,6 +39,11 @@ menu li a{
 	color: #FFFFFF;
 }
 
+.container{
+	align-items: left;
+
+}
+
 main{
   flex: 1;
   display: flex;

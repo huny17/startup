@@ -567,3 +567,99 @@ Event Handlers
 
 LocalStorage
 
+JAVASCRIPT PROMISES____________________________
+
+-browser rendering is single-threaded
+    -one call at a time
+-want to be able to tell it -> go work on it and coma back when done
+
+-Everything must be Asynchronous
+---------------
+function demo (){
+    console.log('Before timeout');
+
+    setTimeout(() => {
+     console.log('In timeout');   
+    }, 5000);
+
+    console.log('After timeout');
+}
+-----------------
+
+new Promise ((resolve, reject) => resolve(true))
+
+promise {<fulfilled:> true}
+
+------------------
+function callback (resolve, reject) {
+    resolve('done');
+}
+
+const p = new Promise(callback);
+
+p.then((resolve_resut) => console.log(resolve_result));
+-------------------
+function flip(){
+
+<!-- const coinToss = -->
+
+return new Promise((resolve, result) =>{   
+    setTimeout(() => { 
+    if (Math.random()  0.1) {
+        resolve(Math.random() > 0.5 ? 'heads' : 'tails');
+    } else {
+        reject('fell of table');
+    }
+
+}, 3000); <!-- = 3 seconds -->
+});
+}
+
+function coinToss () {
+    flip()
+        .then((result) => console.log(`Coin toss result: ${result}`))
+        .catch((err) => console.error(`Error: ${err}`))
+        .finally(()=> console.log('Toss completed'));
+}
+
+Called in
+
+------------------
+
+
+Local Storage-------------
+    -stick it in right away
+    -go to as a back up
+    -both fail, then send error message
+
+Pizza Code----------------
+
+ const orderElement = document.createElement("li"); <!-- creates empty list item -->
+ const order = { element: orderElement, id: id };
+
+  // Insert the order into the HTML list
+  orderElement.innerHTML = `<span>[${order.id}] 😋 <i>Waiting</i> ...</span>`; <!-- creates span item and puts text in list item -->
+  const orders = document.getElementById("orders");
+  orders.appendChild(orderElement); 
+
+
+Async/Await--------------
+
+async function cow(){
+    return new Prmise((resolve) =>{
+        resolve('moo');
+    })
+}
+
+console.log
+
+
+async function cattleDrive() { return cow()} <!-- returns cow promise -->
+
+async function cattleDrive() { return await cow()} <!-- returns moo promise -->
+
+async function cattleDrive() { await cow()} <!-- returns undefined promise -->
+
+@ import url
+
+
