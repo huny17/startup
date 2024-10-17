@@ -660,6 +660,219 @@ async function cattleDrive() { return await cow()} <!-- returns moo promise -->
 
 async function cattleDrive() { await cow()} <!-- returns undefined promise -->
 
-@ import url
+KAHOOT REVIEW______________________________
+
+@ import url('https://fonts.googleapis.com/css?family=Quicksand');
+
+flex-direction: column-reverse; <!-- flips order --> swaps order that element will print
+    "Hello"               "World"
+    "World"    becomes    "Hello"
+
+padding <!-- "puts space arount content of selected elements" -->
+
+const f = y = => ++y;
+coonsole.log(f(3))
+    <!-- output: 4 -->
+
+In HTML, <div>? <!-- creates a division element -->
+
+Order of the CSS box model, starting from the outside going in?
+    <!-- margin, border, padding, content -->
+
+Following code output?
+    let a = ['cow', 'rat', 'fish'];
+    let b = a.filter(v => v.match(/A|f/i));
+    console.log(b);
+        <!-- ['rat', 'fish'] -->
+
+Following code output?
+    let a = ['cow', 'rat', 'fish'];
+    let b = a.reduce((a,v) => [a,v].join(:));
+    console.log(b);
+        <!-- cow:rat:fish -->
+
+Following code output?
+    let a = [1,2,3];
+    let e = a.map(numner = >{
+        return('a' + number)
+    });
+    console.log(e);
+        <!-- ['a1', 'a2', 'a3'] -->
+
+Following code do?
+    document.querySelecto('p').addEventListener('mouseover', console.log);
+        <!-- adds a mouseover event listener to *a* p element -->
+
+HTML tag for unordered list
+    <!-- <ul></ul> -->
+
+NOT valid JavaScript
+    <!-- function f(x) = {} -->
+    because
+
+NOT valid way to include JavaScript in HTML?
+    <!-- <javascript>1+1</javascript> -->
+    javascript tag doesn't exist as an element
+        valid:
+        -script
+        -script src
+        -div onclick
+
+VALID JavaScript Obj
+    <!-- {n:1} -->
+
+    not:
+    - n=1
+    - "n"=1
+    - "n"="1"
+
+What does the DOM textContent property do?
+    <!-- sets the child text for the/an element -->
+
+Which HTML create valid Hyperlink?
+    <!-- <a href = ''>x</a> -->    
+
+Using CSS, how would you turn only BYU text blue?
+    <div>other</div>
+    <dive class="header">BYU</div>
+        <!-- div.header {color: blue;} -->
+        <!-- .header {color: blue;} -->
+
+Which of the following VALID JSON?
+    <!-- {"x":3} -->
+    NOT
+    -{'x':3}
+    -{"x":undefined}
+    -{x:3}
+
+Following console command makes script executable?
+    <!-- chmod +x deploy.sh -->
+    NOT
+    *ls -la deploy.sh
+    *ssh deploy.sh
+    *sudo deploy.sh
+
+Following output?
+    const p = new Promise((resolve, reject) =>{
+        setTimeout(()=> {
+            console.log('taco'); <!--third -->
+            resolve(true);
+        }, 10000);
+    });
+    console.log('burger'); <!-- first -->
+
+    P
+    .then((result) => console.log('shake')) <!-- fourth -->
+    .catch((e) => console.log('salad'))
+    .finally(() => consle.log('noodles)) <!-- last -->
+
+    console.log('fries); <!-- second -->
+<!-- burger fries taco shake noodles -->
+    NOT
+    -taco burger shake salad noodles fries
+    -burger fries taco shake salad noodles
+    -taco burger shake salad noodles salad fries
+
+following output?
+    const a = async function() {
+        return new Promise((resolve, reject) => {
+            setTimeout(() => {console.log('D'); resolve(true)}, 10000);
+        })
+    }
+
+    try {
+        console.log('A');
+        await a();
+        consle.log('B');
+    } catch(e) {
+        console.log('C')
+    }
+
+        <!-- A D B -->
+
+NODE.JS____________________
+
+Modules----------------
+
+    --alert.js--
+        export function alertDisplay(msg) {
+            console.log('***'+msg+'***');
+        }
+
+    --main.js--
+        import {alertDisplay} from './alert.js';
+
+        alertDisplay('called from main.js');
+        console.log("modules are cool");
+
+interpreter that lives in the browser (v8)
+    -stand alone executable: <!-- node.js -->
+
+need to download node
+    NVM - Node version manager
+    Node - JavaScript runtime
+    NPM - Node package manager
+
+Can run JavaScript outside browser
+    Why reinvent the wheel?
+        there are packages people have made that you can use
+
+    --cout.js--
+        function countdown(){
+
+        }
+
+
+    From console - $ node count.js
+
+NPM
+    -need to set up before use:
+        mkdir npmtest
+        cd npmtest
+        npm init -y <!-- "-y" sets default instead of asking all Q.s-->
+    
+    -now can pull in code from other people and use it
+        npm install give-me-a-joke
+
+    -sometimes people updat code and reinstalling or 
+    updating may not work the same way it did before
+        -breaks code
+
+    -also be careful with what you upload
+
+    --joke.js--
+        const giveMeAJoke = require('give-me-a-joke');
+
+        giveMeAJoke.getRandomDadJoke((joke) => {
+            console.log(joke);
+        })
+
+    -active server; hitting, running the joke, and giving it back
+
+fetch("https://localhost:8080")
+
+    --Hello Node.js--
+        <hi>
+        Hello Node.js!
+        </h1>
+    --index.js--
+        app.listen(8080)
+    
+    using port 8080
+
+    
+
+//Debug Console in VS?
+
+
+
+
+
+
+
+
+
+
+
 
 
