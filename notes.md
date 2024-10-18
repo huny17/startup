@@ -790,6 +790,50 @@ following output?
 
         <!-- A D B -->
 
+Study___________________
+Link Element - connects document to external
+    -common: style sheets
+
+ID - #
+Class - .
+
+DNS = Domain Name System, internet phonebook
+    -DNS lookup when website visited
+
+Port 443 - standard secure (https)
+    -web certificate necessary
+
+Port 80 - default (HTTP)
+
+Port 22 - SSH 
+
+Top-level domain - ".com" ".org"
+
+root domain - rootdomain.com, rootdomain.TLD
+
+Subdomain  - subdomain.rootdomain.com, subdomain.rootdomain.TLD
+
+rsh - remote shell session
+
+ls -la - long list that includes starting . entries
+
+chmod, set or modify permissions
+pwd,  write to standard output full path name
+cd, moves up on level of directory
+ls, lists files
+vim, editor, create or edit text file
+nano, quickly edit text files from command line
+mkdir, make directory
+mv, move file, directory, renames
+rm, removes entries for specified file
+man, renfernce inf on topics (commands, subroutines, and files)
+ssh, executes commands from command line string, standard input, or file
+ps, check status of active processes and tech info
+wget, retrieve files from internet
+sudo, temporarily grant group privileged access to system resources can't in regular account
+
+
+
 NODE.JS____________________
 
 Modules----------------
