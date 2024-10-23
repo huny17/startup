@@ -700,7 +700,7 @@ Following code output?
         <!-- ['a1', 'a2', 'a3'] -->
 
 Following code do?
-    document.querySelecto('p').addEventListener('mouseover', console.log);
+    document.querySelector('p').addEventListener('mouseover', console.log);
         <!-- adds a mouseover event listener to *a* p element -->
 
 HTML tag for unordered list
@@ -907,6 +907,100 @@ fetch("https://localhost:8080")
     
 
 //Debug Console in VS?
+
+_________________________________________________
+Node.js - backend stuff
+
+NPM - Node Package Manger - import from other people's premade code
+
+Web Frameworks--------------
+    simplify common patterns
+    provide common compomenets
+    improve performance
+    increase device coverage
+
+React------------
+
+JSX--------------
+    comb html and javascript
+
+    const i = 3;
+    const list = (
+        <ol class ='big'>
+    )
+
+
+
+Babel in Codepen------------------
+    JS settings
+
+        HTML - <div id="root">loading...</div>
+        JS(babel) - ReactDOM.render(<p>Hello world</p>, document.querySelector("#root"));
+
+
+App Components----------------
+    -you can have components inside components
+
+    (import React:)
+        (import React from "https://cdn.skypack.dev/react";)
+        (import ReactDOM from "https://cdn.skypack.dev/react-dom";)
+
+    ---------------------------------------------
+    const Hello = ({phrase}) => { //Define
+        return(
+            <div>
+                <p>Hello {phrase}</p> //Use
+            </div>
+        );
+    };
+
+    ReactDOM.render(<Hello phrase = "function" />, document.querySelector("#root")); //Provide
+    ---------------------------------------------
+
+    *Destructuring* - way to pull pieces of an object/array out into independent variables
+        EX
+            - {food:"apples", number: 7}
+            - a = {food:"apples", number: 7}
+            - a.food output apples
+            - a.numbers output 7
+            -{food} = a 
+                - pulls out value, makes object "food" that equals apples
+
+        ---------------------------------------------
+        const Hello = () => { 
+            const [color, setColor] = React.useState("red"); //Define
+            function changeColor(){
+                setColor(color === "red" ? "green" : "red"); //Update
+            }
+
+            return(
+                <div>
+                    <p style={{ color: color}}>Hello</p> //Use
+                    <button onClick={changeColor}>change</button>
+                </div>
+            );
+        };
+
+        ReactDOM.render(<Hello phrase = "function" />, document.querySelector("#root")); 
+        ----------------------------------------------
+            setColor(color === "red" ? "green" : "red");
+                -flips between colors
+                -if red turn green, if not red turn green
+                -toggle
+        
+            color:
+                - key word 
+            color
+                - value
+            
+            helps to not name the same but is common
+        
+        UseEffectHook
+
+        function UseEffectHookDemo(){
+            
+        }
+
 
 
 
