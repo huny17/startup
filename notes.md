@@ -1001,14 +1001,56 @@ App Components----------------
             
         }
 
+REACT: ROUTER, SIMON TOOLCHAIN_______________________________________________
 
+-simon/startup CSS port "due" Nov 2
 
+-React building blocks - components
+-JSX - mix of JSON and HTML
+-virtual DOM - preview?
+-
 
+Toolchain-----------
+-npm run build
+-babel converts react to javascript
+-vite extends abilities past VS Code
 
+Vite------------
+-NPM create vite @ latest demovitte -- -- template  react
+-CD demovite && npm install
+-npm run dev
 
+    index.html
+        <body>
+            <div id="root"></div>
+            <script type="module" src="/src/"
+        </body>
 
+import 'bootstrap'
 
+        export default function App() {
+            return(
+                <BrowserRouter>
 
+                <Routes>
+                    <Route path='/' element={<Login />}>
+                </Routes>
+
+                </BrowserRouter>
+
+            )
+
+        }
+
+            -className
+            -NavLink
+            -to=''
+
+REACT PT 1 IMAGES
+-in react part 2, under study this code
+-copy to browser
+-go to public folder
+-.mp3s are pictures
 
 
 
