@@ -1050,7 +1050,162 @@ REACT PT 1 IMAGES
 -in react part 2, under study this code
 -copy to browser
 -go to public folder
--.mp3s are pictures
+-.mp3s are pictures 
+
+
+WIFI--------------------------
+             [HTTP/SSH]
+             [APP] 
+             [TCP] //Like phone call
+             [Internet] IP (v6/v4) //Like Post Office
+DHCP, Mac    [Physical] Wifi cell ethernet
+
+prodocol layers
+
+DNS byu.edu: 128.187.16.124
+
+     -> [.edu] -> 
+[DNS]           [ ]
+     -> [.com] ->
+
+dig command
+
+trace command
+    trace traceroute traceroute6
+
+gsuite.tools
+
+TCP------------------
+-port
+
+
+Backend Servers_________________________
+assignment - Fetch
+    fetch('https://quote.cs260.click')
+        .then((response) => resonse.json)
+
+
+    fetch(url)
+        .then(r => r.text())
+        .then(j => console.log(j.value))
+
+    const r = await fethc(')
+    const j = await
+
+Node Web services_____________________
+
+    const http = require('http');
+    const server = http.createServer (function (req, res) {
+        res.writeHead(200, {'content-type': 'text/html'});
+        res.write(`<h1>Hello Node.js! [${req.method}] ${req.url}</h1>`);
+        res.end();
+    });
+
+    server.listen(8080, () => {
+        console.log(`Web service listening on port 8080);
+    });
+
+-curly bracket stuff? evaluate it and return
+-can call in console : node index.js
+    -shows: Hello Node.js! [GET]/
+            Get : method
+            / : part of domian?
+
+-Node running and interpreting code regardless of command line or VS code
+
+Express_______________________________
+-simple yet powerful
+    -Express : cunstructor and default middleware
+    -app : express application
+    -req : request obj
+    -res : 
+    -router
+npm init -y
+
+
+    const express = require('express');
+    const app =express();
+
+    app.get('*', (req, res) => {
+        res.send(`<h1>Hello Express! [${req.method}] ${req.originalUrl}</h1>`)
+    });
+
+    app.list(8080);
+
+    Middleware------------
+        app.use([path,] callback(req,res,next))
+
+        app.use(function(req,res,next){
+            console.log('Time: %d)
+        })
+
+        app.use()
+            -logger('dev');
+            -(express.json());
+            -(cookieParser());
+                -what is a cookie?
+                    -temp Storage
+                    -info for the back end
+                    -but stored on the front end
+            -(express.static('public'));
+
+        -order matters
+
+
+            const express = require('express');
+            const cookieParser = require('cookie-parser');
+            const app = express();
+
+            // Third party middleware - Cookies
+            app.use(cookieParser());
+
+            app.post('/cookie/:name/:value', (req, res, next) => {
+            res.cookie(req.params.name, req.params.value);
+            res.send({cookie: `${req.params.name}:${req.params.value}`});
+            });
+
+            app.get('/cookie', (req, res, next) => {
+            res.send({cookie: req.cookies});
+            });
+
+            // Creating your own middleware - logging
+            app.use((req, res, next) => {
+            console.log(req.originalUrl);
+            next();
+            });
+
+            // Built in middleware - Static file hosting
+            app.use(express.static('public'));
+
+            // Routing middleware
+            app.get('/store/:storeName', (req, res) => {
+            res.send({name: req.params.storeName});
+            });
+
+            app.put('/st*/:storeName', (req, res) => res.send({update: req.params.storeName}));
+
+            app.delete(/\/store\/(.+)/, (req, res) => res.send({delete: req.params[0]}));
+
+            // Error middleware
+            app.get('/error', (req, res, next) => {
+            throw new Error('Trouble in river city');
+            });
+
+            app.use(function (err, req, res, next) {
+            res.status(500).send({type: err.name, message: err.message});
+            });
+
+            // Listening to a network port
+            const port = 8080;
+            app.listen(port, function () {
+            console.log(`Listening on port ${port}`);
+            });
+
+
+CORS/SOP______________________________
+
+
+
 
 
 
