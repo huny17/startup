@@ -1205,8 +1205,21 @@ npm init -y
 CORS/SOP______________________________
 
 
+WEB SERVICES: SIMON SERIVCE, ENDPOINT DESIGN, PM2________________
 
+API is an ENDPOINT
 
+Endpoint?
+    -a point where somewhere ends up going.
+    -all the differnt API calls you can make
+    -calls you can make through a url
+Middleware?
+    -software in the middle
+    -different things that happen in between getting REQ and sending RES
+Express?
+    -npm package for organizing middleware
+
+New Deployment script again______________
 
 
 

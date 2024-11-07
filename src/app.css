@@ -1,3 +1,13 @@
+/* import 'bootstrap/dist/css/bootstrap.min.css';
+
+export function NavButton({ text, url }) {
+	const navigate = useNavigate();
+	return (
+	  <Button variant='primary' onClick={() => navigate({ url })}>
+		{text}
+	  </Button>
+	);
+  } */
 
 .body{
 	font-family: Serif;
