@@ -2,10 +2,10 @@ import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './app.css';
 import { BrowserRouter, NavLink, Route, Routes } from 'react-router-dom';
-import { Login } from './login/login';
-import { MainScreen } from './mainScreen/mainScreen';
-import { LuckMeter } from './luckMeter/luckMeter';
-import { Info } from './info/info';
+import { Login } from './src/login/login';
+import { MainScreen } from './src/mainScreen/mainScreen/mainScreen';
+import { LuckMeter } from './src/luckMeter/luckMeter';
+import { Info } from './src/info/info';
 import './app.css';
 
 function App() {

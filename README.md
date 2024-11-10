@@ -70,13 +70,16 @@ Are you wanting to test your odds? Missing carnival games? Or just bored and loo
 
 ## CSS Deliverable
 
-+CSS Sheet
-  - Color scheme
++ CSS Sheet
+  - color scheme
   - flex
   - bootstrap
-  - Clickable images of Teacups
+  - clickable images of Teacups
 
-## React Delverable
+## React 
++ converted from html to mainly Javascript React
++ contains some interactive features
++ Buttons should create some effect
 
 ## Service Deliverable
 
