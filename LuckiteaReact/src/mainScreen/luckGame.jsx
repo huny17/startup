@@ -7,10 +7,11 @@ import './LuckGame.css';
 
 
 export function LuckGame(props) {
-    const user = props.user;
+    const userName = props.userName;
     const buttons = new Map();
 
     const [allowPlayer, setAllowPlayer] = React.useState(false);
+    const [sequence, setSequence] = React.useState([]);
 
     async function onPressed(buttonPosition) {
         if (allowPlayer) {
@@ -19,14 +20,14 @@ export function LuckGame(props) {
 
         fateNum = Math.random();
         if (fateNum % 2 === 0) {
-            saveScore(int(user.score) + 5);
+            saveScore(int(userName.score) + 5);
             }
         if (Math.abs(fateNum % 2)=== 1) {
-            saveScore(int(user.score) + 1);
+            saveScore(int(userName.score) + 1);
             }
 
         else {
-            saveScore(int(user.score) - 5);
+            saveScore(int(userName.score) - 5);
         }
       }
     }
@@ -35,7 +36,7 @@ export function LuckGame(props) {
         const date = new Date().toLocaleDateString();
         const newScore = { name: userName, score: score, date: date };
 
-        GameNotifier.broadcastEvent(user, GameEvent.End, newScore);
+        GameNotifier.broadcastEvent(userName, GameEvent.End, newScore);
 
         updateMeter(newScore);
     }
