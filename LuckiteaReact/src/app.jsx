@@ -23,26 +23,36 @@ function App() {
           </div>
           <menu className='navbar-nav'>
             <li className='nav-item'>
-              <NavLink className='nav-link' to='index.html'>Home </NavLink>
+              <NavLink className='nav-link' to=''>
+                  Login
+                </NavLink>
             </li>
             <li className='nav-item'>
-              <NavLink className='nav-link' to='mainScreen.html'>MainScreen</NavLink>
+              <NavLink className='nav-link' to='index'>
+                Home </NavLink>
             </li>
+            {authState === AuthState.Authenticated && (
             <li className='nav-item'>
-              <NavLink className='nav-link' to='luckMeter.html'>
-                LuckMeter
+              <NavLink className='nav-link' to='mainScreen'>
+                Main Screen
               </NavLink>
             </li>
+            )}
+            {authState === AuthState.Authenticated && (
             <li className='nav-item'>
-              <NavLink className='nav-link' to='info.html'>
+              <NavLink className='nav-link' to='luckMeter'>
+                Luck Meter
+              </NavLink>
+            </li>
+            )}
+            <li className='nav-item'>
+              <NavLink className='nav-link' to='info'>
                 Info
               </NavLink>
             </li>
           </menu>
         </nav>
       </header>
-
-      <main>App components go here</main>
 
       <Routes>
         <Route
@@ -59,14 +69,13 @@ function App() {
             }
             exact
           />
-        <Route path = '/' element={<Login />} exact />
-        <Route path = '/mainScreen' element={<MainScreen />} />
+        <Route path = '/mainScreen' element={<MainScreen userName={userName} />} />
         <Route path = '/luckMeter' element={<LuckMeter />} />
         <Route path = '/info' element={<Info />} />      
         <Route lpath = '*' element={<NotFound />} />
       </Routes>
 
-      <footer className='bg-dark text-white-50'>
+      <footer className='bg-dark text-dark text-muted'>
         <div className='container-fluid'>
           <span className='text-reset'>Huny17</span>
           <a className='text-reset' href='https://github.com/huny17/startup'>

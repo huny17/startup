@@ -1,7 +1,7 @@
 import React from 'react';
+import './info.css';
 
-
-export function About(props){
+export function Info(props){
 
   return (
     <main className='container-fluid bg-secondary text-center'>
