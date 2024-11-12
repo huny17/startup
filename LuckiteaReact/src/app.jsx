@@ -19,17 +19,13 @@ function App() {
       <header className='container-fluid'>
         <nav className='navbar fixed-top navbar-dark'>
           <div className='navbar-brand'>
-            Simon<sup>&reg;</sup>
+            Luckitea
           </div>
           <menu className='navbar-nav'>
             <li className='nav-item'>
               <NavLink className='nav-link' to=''>
                   Login
                 </NavLink>
-            </li>
-            <li className='nav-item'>
-              <NavLink className='nav-link' to='index'>
-                Home </NavLink>
             </li>
             {authState === AuthState.Authenticated && (
             <li className='nav-item'>

@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { Button } from 'react-bootstrap';
-import { LuckButton } from './LuckButton';
+import { LuckButton } from './luckButton';
 import { GameEvent, GameNotifier } from './gameNotifier';
 import './LuckGame.css';
 
@@ -69,8 +69,8 @@ export function LuckGame(props) {
       }
 
         buttons.set('button-left', { position: 'button-left', ref: React.useRef() });
-        buttons.set('button-right', { position: 'button-right', ref: React.useRef() });
-        buttons.set('button-middle', { position: 'button-middle', ref: React.useRef() });
+        buttons.set('button-middle', { position: 'button-right', ref: React.useRef() });
+        buttons.set('button-right', { position: 'button-middle', ref: React.useRef() });
   
 
     const buttonArray = Array.from(buttons, ([key, value]) => {
@@ -82,13 +82,7 @@ export function LuckGame(props) {
         <div className='button-container'>
           <>{buttonArray}</>
           <div className='controls center'>
-            <div className='game-name'>
-              Luckitea<sup>&reg;</sup>
-            </div>
             <div className='score center'>{sequence.length === 0 ? '--' : sequence.length - 1}</div>
-            <Button variant='primary' onClick={() => reset()}>
-              Reset
-            </Button>
           </div>
         </div>
       </div>

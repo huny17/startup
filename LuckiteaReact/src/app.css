@@ -11,17 +11,17 @@ header{
 }
 
 main{
-		background-image: url('teaBack.png');
-		background-size: 400px;
-		width: 600;
-		height: 500;
-		color: #51414F;
-		text-decoration: none;
 		flex: 1;
 		display: flex;
 		flex-direction: column;
 		align-items: center;
 		justify-content: space-around;
+		background-image: url('teaBack.png');
+		background-repeat: no-repeat;
+		background-size: contain;
+		background-position: center;
+		color: #004741;
+		text-decoration: none;
 }
 
 menu{
