@@ -5,7 +5,7 @@ import { LuckGame } from './luckGame';
 
 export function MainScreen(props) {
   return (
-    <main className='bg-secondary'>
+    <main>
       <Players userName={props.userName} />
       <LuckGame userName={props.userName} />
     </main>

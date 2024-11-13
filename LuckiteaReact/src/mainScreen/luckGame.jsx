@@ -74,16 +74,21 @@ export function LuckGame(props) {
   
 
     const buttonArray = Array.from(buttons, ([key, value]) => {
-        return <LuckButton key={key} ref={value.ref} position={key} onPressed={() => onPressed(key)}></LuckButton>;
-    });
+        return( 
+        // <LuckButton key={key} ref={value.ref} position={key} onPressed={() => onPressed(key)}>
+        //   <img src='/teaCup.png' alt="teacup"></img>
+        // </LuckButton>
+        <button onClick={() => onPressed(key)}>
+        <img className='picture' src="/teaCup.png" alt="teacup" />
+        </button>
+        );
+      });
 
     return (
         <div className='game'>
+          <div className='score center'>{sequence.length === 0 ? '--' : sequence.length - 1}</div>
         <div className='button-container'>
           <>{buttonArray}</>
-          <div className='controls center'>
-            <div className='score center'>{sequence.length === 0 ? '--' : sequence.length - 1}</div>
-          </div>
         </div>
       </div>
     );

@@ -33,7 +33,8 @@ export function LuckMeter() {
   }
 
   return (
-    <main className='container-fluid bg-secondary text-center'>
+    <main>
+      <div className='container-fluid text-center'>
       <table className='table table-warning table-striped-columns'>
         <thead className='table-dark'>
           <tr>
@@ -45,6 +46,7 @@ export function LuckMeter() {
         </thead>
         <tbody id='scores'>{meterLines}</tbody>
       </table>
+      </div>
     </main>
   );
 

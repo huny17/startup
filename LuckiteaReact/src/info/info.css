@@ -1,5 +1,12 @@
-  
-  p{
-      background: rgb(159, 231, 231);
-  }
-  
+.paint{
+  background-color: rgb(145, 95, 109, 0.8);
+  padding: 10px;
+}
+
+.skeleton{
+  flex: auto;
+  align-content: center;
+  padding: 50px;
+  /*align-items: left;*/
+
+}

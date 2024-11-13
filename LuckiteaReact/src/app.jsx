@@ -15,7 +15,7 @@ function App() {
 
   return (
     <BrowserRouter>
-    <div className='body bg-dark text-light'>
+    <div className='body'>
       <header className='container-fluid'>
         <nav className='navbar fixed-top navbar-dark'>
           <div className='navbar-brand'>
@@ -30,14 +30,14 @@ function App() {
             {authState === AuthState.Authenticated && (
             <li className='nav-item'>
               <NavLink className='nav-link' to='mainScreen'>
-                Main Screen
+                Teacups
               </NavLink>
             </li>
             )}
             {authState === AuthState.Authenticated && (
             <li className='nav-item'>
               <NavLink className='nav-link' to='luckMeter'>
-                Luck Meter
+              ☘Meter
               </NavLink>
             </li>
             )}
@@ -71,12 +71,12 @@ function App() {
         <Route lpath = '*' element={<NotFound />} />
       </Routes>
 
-      <footer className='bg-dark text-dark text-muted'>
-        <div className='container-fluid'>
-          <span className='text-reset'>Huny17</span>
-          <a className='text-reset' href='https://github.com/huny17/startup'>
-            Source
+      <footer className='foot'>
+        <div>
+        <a href='https://github.com/huny17/startup'>
+            GitHub
           </a>
+          <span>Huny17</span>
         </div>
       </footer>
     </div>

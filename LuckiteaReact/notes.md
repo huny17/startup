@@ -1221,6 +1221,21 @@ Express?
 
 New Deployment script again______________
 
+PM2___________
+-Daemons
+    -Keeps your node service running
+        -pm2 ls
+        -cd ~/services/appname
+        -pm2 start index.js -n appname -- 5501
+        -pm2 save
 
+-pm2 stop
+
+Service
+-athentication
+-using backend server to retain info
+
+
+Debugging Web Services
 
 
