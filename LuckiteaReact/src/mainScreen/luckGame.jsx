@@ -12,24 +12,25 @@ export function LuckGame(props) {
 
     const [allowPlayer, setAllowPlayer] = React.useState(false);
     const [sequence, setSequence] = React.useState([]);
+    const [score, setScore] = React.useState(0);
 
     async function onPressed(buttonPosition) {
-        if (allowPlayer) {
-        setAllowPlayer(false);
-        await buttons.get(buttonPosition).ref.current.press();
+        // if (allowPlayer) {
+        // setAllowPlayer(false);
+        // await buttons.get(buttonPosition).ref.current.press();
 
         fateNum = Math.random();
         if (fateNum % 2 === 0) {
-            saveScore(int(userName.score) + 5);
+            saveScore(score + 5);
             }
-        if (Math.abs(fateNum % 2)=== 1) {
-            saveScore(int(userName.score) + 1);
+        if (fateNum % 5 === 0) {
+          saveScore(score - 5);
             }
-
         else {
-            saveScore(int(userName.score) - 5);
-        }
-      }
+          saveScore(score + 1);
+            }
+            
+      // }
     }
 
         async function saveScore(score) {
@@ -69,16 +70,13 @@ export function LuckGame(props) {
       }
 
         buttons.set('button-left', { position: 'button-left', ref: React.useRef() });
-        buttons.set('button-middle', { position: 'button-right', ref: React.useRef() });
-        buttons.set('button-right', { position: 'button-middle', ref: React.useRef() });
+        buttons.set('button-middle', { position: 'button-middle', ref: React.useRef() });
+        buttons.set('button-right', { position: 'button-right', ref: React.useRef() });
   
 
     const buttonArray = Array.from(buttons, ([key, value]) => {
         return( 
-        // <LuckButton key={key} ref={value.ref} position={key} onPressed={() => onPressed(key)}>
-        //   <img src='/teaCup.png' alt="teacup"></img>
-        // </LuckButton>
-        <button onClick={() => onPressed(key)}>
+        <button key={key} onClick={() => onPressed(key)}>
         <img className='picture' src="/teaCup.png" alt="teacup" />
         </button>
         );
