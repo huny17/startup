@@ -17,11 +17,7 @@ export function Players(props) {
   });
 
   function handleGameEvent(event) {
-    let newEvents = [event, ...events];
-    if (newEvents.length > 10) {
-      newEvents = newEvents.slice(1, 10);
-    }
-    setEvent(newEvents);
+    setEvent([...events, event]);
   }
 
   function createMessageArray() {
@@ -29,9 +25,9 @@ export function Players(props) {
     for (const [i, event] of events.entries()) {
       let message = 'unknown';
       if (event.type === GameEvent.End) {
-        message = `scored ${event.value.score}`;
+        message = `${event.value.score} ☘`;
       } else if (event.type === GameEvent.Start) {
-        message = `started a new game`;
+        message = `tried their luck`;
       } else if (event.type === GameEvent.System) {
         message = event.value.msg;
       }

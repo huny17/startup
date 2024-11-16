@@ -1,0 +1,70 @@
+.body{
+	display: flex;
+	flex-direction: column;
+	min-width: 375px;
+	height: 100vh;
+	
+}
+
+header{
+	flex: 0 80px;
+	background-color: #915F6D;
+}
+
+main{
+		flex: 1;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: space-around;
+		background: url('teaBack.png') no-repeat #004741;;
+		background-size: contain;
+		background-position: center;
+		text-decoration: none;
+}
+
+menu{
+	flex: 1;
+	display: flex;
+	flex-direction: row !important;
+	list-style: none;
+}
+
+.navbar-brand {
+	padding-left: 0.6em;
+	/* border-bottom: solid rgb(182, 182, 182) thin; */
+  }
+
+menu .nav-item {
+	text-decoration: none;
+	color: #FFFFFF;
+	padding: 0 0.3em;
+}
+
+.foot{
+	flex: 0 30px;
+	background: #222222;
+}
+
+.foot a{
+	float: right;
+	color: #915F6D;
+	text-decoration: none;
+	padding: 0 25px 0 0;
+}
+
+.foot span{
+	float: right;
+	color: #915F6D;
+	padding: 0 25px 0 0;
+}
+
+
+@media (max-height: 600px) {
+	header {
+	  display: none;
+	}
+	footer {
+	  display: none;
+	}
+}

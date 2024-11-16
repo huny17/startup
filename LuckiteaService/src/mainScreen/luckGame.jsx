@@ -42,37 +42,44 @@ export function LuckGame(props) {
         const date = new Date().toLocaleDateString();
         const newScore = { name: userName, score: score, date: date };
 
+        await fetch('/api/score', {
+          method: 'POST',
+          headers: { 'content-type': 'application/json' },
+          body: JSON.stringify(newScore),
+        });
+
+
         GameNotifier.broadcastEvent(userName, GameEvent.End, newScore);
 
-        updateMeter(newScore);
+        // updateMeter(newScore);
     }
 
-    function updateMeter(newMeter){
-      let scores = [];
-      const scoresText = localStorage.getItem('scores');
-      if (scoresText) {
-        scores = JSON.parse(scoresText);
-      }
+    // function updateMeter(newMeter){
+    //   let scores = [];
+    //   const scoresText = localStorage.getItem('scores');
+    //   if (scoresText) {
+    //     scores = JSON.parse(scoresText);
+    //   }
 
-      let found = false;
-      for (const [i, prevScore] of scores.entries()) {
-        if (newMeter.score > prevScore.score) {
-          scores.splice(i, 0, newMeter);
-          found = true;
-          break;
-        }
-      }
+      // let found = false;
+      // for (const [i, prevScore] of scores.entries()) {
+      //   if (newMeter.score > prevScore.score) {
+      //     scores.splice(i, 0, newMeter);
+      //     found = true;
+      //     break;
+      //   }
+      // }
 
-      if (!found) {
-        scores.push(newMeter);
-      }
+      // if (!found) {
+      //   scores.push(newMeter);
+      // }
 
-      if (scores.length > 10) {
-        scores.length = 10;
-      }
+      // if (scores.length > 10) {
+      //   scores.length = 10;
+      // }
 
-      localStorage.setItem('scores', JSON.stringify(scores));
-      }
+      // localStorage.setItem('scores', JSON.stringify(scores));
+      // }
 
         buttons.set('button-left', { position: 'button-left', ref: React.useRef() });
         buttons.set('button-middle', { position: 'button-middle', ref: React.useRef() });

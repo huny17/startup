@@ -82,8 +82,6 @@ Are you wanting to test your odds? Missing carnival games? Or just bored and loo
 + Buttons should create some effect
 
 ## Service Deliverable
-+ backend storage instead of local storage
-+ frontend using express
 
 ## DB/Login Deliverble
 
