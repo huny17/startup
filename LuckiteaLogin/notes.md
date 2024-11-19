@@ -1279,3 +1279,25 @@ MongoDB
     -should not acutally store the password in plain text 
 
 -Hash Table Attack
+
+DATABASE & LOGIN: SIMONG
+
+Data Services
+    -MongoDB
+
+main steps service
+    -backend called by express
+
+Login
+    -using cookies
+    -just service folder being updated
+
+...req.boy, ip: req.ip
+    -"..." means take request body and pull it apart and list items
+
+-debug using vite
+    -can use break points (backend - vs code)
+    -front end - vite break points
+    -https : should help encrypt when lookig at network traffic
+    
+

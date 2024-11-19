@@ -82,6 +82,9 @@ Are you wanting to test your odds? Missing carnival games? Or just bored and loo
 + Buttons should create some effect
 
 ## Service Deliverable
++ front end talking to backend
++ authetication more complex
++ preparing for login
 
 ## DB/Login Deliverble
 
