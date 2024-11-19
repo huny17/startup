@@ -87,6 +87,9 @@ Are you wanting to test your odds? Missing carnival games? Or just bored and loo
 + preparing for login
 
 ## DB/Login Deliverble
++ encrpting passwords
++ using MongoDB to save information on server
++ less local storage used
 
 ## WebSocket Deliverable
 
