@@ -1300,4 +1300,23 @@ Login
     -front end - vite break points
     -https : should help encrypt when lookig at network traffic
     
+WEBSOCKETS_______________________
+-simple but funky
 
+How do we safely establish a database connection?
+    - json file config file
+    - write in gitignore file
+How do we secure parts of our app behind authentication?
+    - separate api router
+
+HTTP
+    HTTP client -> fetch requests -> HTTP Server
+    HTTP client <- sends info back after client request <- HTTP Server
+
+    websocket peer -> ping -> websocket peer
+    websocket peer <- pong <- websocket peer
+
+javascript file was updated -> server -> relaod the browser there is new code
+
+require('ws') - package/node
+    -3 different ws 3 different meanings 
