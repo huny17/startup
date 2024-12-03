@@ -1361,3 +1361,50 @@ Another type of event listener:
     socket.onmessage = (event) => {
         console.log('received: ', event.data);
     };
+
+-index
+-game
+-players
+
+-peerProxy
+-gameNotifier
+
+
+-return fucnction in event call?
+    -provides clean version of DOM before update
+
+
+-putting dependency changing event in use effect causes loop
+
+NO LOOP___________
+
+  const [events, setEvent] = React.useState([]);
+
+  React.useEffect(() => {
+    GameNotifier.addHandler(handleGameEvent);
+
+    return () => {
+      GameNotifier.removeHandler(handleGameEvent);
+    };
+  });
+
+  function handleGameEvent(event) {
+    setEvent([...events, event]);
+  }
+
+
+  VS
+
+LOOP________________________
+
+|||
+vvv
+  const [events, setEvent] = React.useState([]);
+
+  React.useEffect(() => {
+    GameNotifier.addHandler(setEvent([...events, event]));
+
+    return () => {
+      GameNotifier.removeHandler(setEvent([...events, event]));
+    };
+  });
