@@ -1320,3 +1320,11 @@ javascript file was updated -> server -> relaod the browser there is new code
 
 require('ws') - package/node
     -3 different ws 3 different meanings 
+
+pipe connection
+-2 sides
+
+Chat example
+- more than 2
+- bottle neck, if server goes down no one can chat
+
