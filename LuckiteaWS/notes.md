@@ -1330,3 +1330,34 @@ Chat example
 
 SIMON WEBSOCKETS___________________________________
 
+-what are websckets and how do they work?
+    -peer to peer communication
+    -HTTP protocol ws, updates communication
+    -piggy backing off HTTP
+
+-chat example
+
+wss.on('connection', (ws) => {           */event listener/*
+    })
+
+    -when 'connection' happens (ws) is passed through
+    -this (ws) is a connection request object and can be called whatever we want
+
+wss.on('connection', (ws) => {           */event listener/*
+    ws.on('message', (data) =>{         */following ws is from the (ws) obj/*
+        const msg = String.fromCharCode(...data);
+        console.log('received: %s', msg);
+
+        ws.send(`I heard you say "${msg}"`);
+    });
+    
+    ws.send('Hello webSocket');
+
+    });    
+
+Another type of event listener:
+    const socket = 
+
+    socket.onmessage = (event) => {
+        console.log('received: ', event.data);
+    };

@@ -92,6 +92,7 @@ Are you wanting to test your odds? Missing carnival games? Or just bored and loo
 + less local storage used
 
 ## WebSocket Deliverable
++ peer to peer communication
 
 Startup BYU CS260
 [Note Paper](docs/notes.md)
