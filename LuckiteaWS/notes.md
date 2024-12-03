@@ -1408,3 +1408,12 @@ vvv
       GameNotifier.removeHandler(setEvent([...events, event]));
     };
   });
+
+
+const wss = new WebSocketServer({ noServer: true }); //don't automatically
+
+const connection = { id: uuid.v4(), alive: true, ws: ws };
+                                                ^    ^
+                                                |    |
+                                                key  socket
+
