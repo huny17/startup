@@ -1417,3 +1417,27 @@ const connection = { id: uuid.v4(), alive: true, ws: ws };
                                                 |    |
                                                 key  socket
 
+SECURITY--------------
+
+common attacks
+    -injection
+    -cross-site scripting
+    -denial of service
+    -credential stuffing
+    -social engineering (Worry about the most more than the others combined)
+
+The Line of death
+-anything below url/search bar, be skeptical
+-tab name, arrows and refresh, and subroot can be faked
+-actual website name can't be changed
+-
+OWASP 10
+    -open worldwide application security project
+    -came up with top ten issues
+
+White Hat - find problems to fix not exploit
+
+Juice Shop
+-proj made by OWASP
+-
+
