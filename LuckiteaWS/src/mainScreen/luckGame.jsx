@@ -1,85 +1,62 @@
 import React from 'react';
 
-import { Button } from 'react-bootstrap';
-import { LuckButton } from './luckButton';
 import { GameEvent, GameNotifier } from './gameNotifier';
 import './LuckGame.css';
-
 
 export function LuckGame(props) {
     const userName = props.userName;
     const buttons = new Map();
+    const mistakeSound = new Audio(`/cup-fall-edit.mp3`);
+    const goodSound = new Audio(`/stir-cup-edit.mp3`);
+    const okSound = new Audio(`/cup-down-edit.mp3`);
 
     const [allowPlayer, setAllowPlayer] = React.useState(false);
-    const [sequence, setSequence] = React.useState([]);
     const [score, setScore] = React.useState(0);
     
-
-    async function onPressed(buttonPosition) {
+    function onPressed() {
       const fateNum = Math.floor(Math.random() * 10); 
 
-        setScore((prevScore) => {
-
+        setScore((prevScore) => {  // Good Luck
           let updatedScore = prevScore;
-          if (fateNum % 2 === 0) {
+          if (fateNum === 6) {
             updatedScore += 5;
-            <>Good Luck</>
-              }
-          else if (fateNum % 3 === 0) {
+            goodSound.play();
+          } 
+          else if (fateNum === 7) { // Bad Luck
             updatedScore -= 5;
-            <>Bad Luck</>
-              }
-          else {
+            mistakeSound.play();
+            reset();
+            saveScore(updatedScore);
+            updatedScore = 0;
+          }
+          else { // normal Luck
             updatedScore += 1;
-            <>normal Luck</>
-              }
-            return updatedScore;
-            });    
-        await saveScore(updatedScore)
+            okSound.play();
+          }
+          return updatedScore;
+          });
+      saveScore(updatedScore)  
     }
 
-        async function saveScore(score) {
-        const date = new Date().toLocaleDateString();
-        const newScore = { name: userName, score: score, date: date };
-
-        await fetch('/api/score', {
-          method: 'POST',
-          headers: { 'content-type': 'application/json' },
-          body: JSON.stringify(newScore),
-        });
-
-
-        GameNotifier.broadcastEvent(userName, GameEvent.End, newScore);
-
-        // updateMeter(newScore);
+    async function reset() {
+      setAllowPlayer(false);
+          // Let other players know a new game has started
+      GameNotifier.broadcastEvent(userName, GameEvent.Start, {});   
     }
 
-    // function updateMeter(newMeter){
-    //   let scores = [];
-    //   const scoresText = localStorage.getItem('scores');
-    //   if (scoresText) {
-    //     scores = JSON.parse(scoresText);
-    //   }
+    async function saveScore(score) {
+    const date = new Date().toLocaleDateString();
+    const newScore = { name: userName, score: score, date: date };
 
-      // let found = false;
-      // for (const [i, prevScore] of scores.entries()) {
-      //   if (newMeter.score > prevScore.score) {
-      //     scores.splice(i, 0, newMeter);
-      //     found = true;
-      //     break;
-      //   }
-      // }
+    await fetch('/api/score', {
+      method: 'POST',
+      headers: { 'content-type': 'application/json' },
+      body: JSON.stringify(newScore),
+    });
 
-      // if (!found) {
-      //   scores.push(newMeter);
-      // }
 
-      // if (scores.length > 10) {
-      //   scores.length = 10;
-      // }
-
-      // localStorage.setItem('scores', JSON.stringify(scores));
-      // }
+    GameNotifier.broadcastEvent(userName, GameEvent.End, newScore);
+    }
 
         buttons.set('button-left', { position: 'button-left', ref: React.useRef() });
         buttons.set('button-middle', { position: 'button-middle', ref: React.useRef() });
@@ -102,4 +79,4 @@ export function LuckGame(props) {
         </div>
         </div>
     );
-}
+  }
