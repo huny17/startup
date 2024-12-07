@@ -12,7 +12,7 @@ export function LuckGame(props) {
 
     const [allowPlayer, setAllowPlayer] = React.useState(false);
     const [score, setScore] = React.useState(0);
-    
+
     function onPressed() {
       const fateNum = Math.floor(Math.random() * 10); 
 
@@ -40,7 +40,6 @@ export function LuckGame(props) {
 
     async function reset() {
       setAllowPlayer(false);
-          // Let other players know a new game has started
       GameNotifier.broadcastEvent(userName, GameEvent.Start, {});   
     }
 
@@ -53,7 +52,6 @@ export function LuckGame(props) {
       headers: { 'content-type': 'application/json' },
       body: JSON.stringify(newScore),
     });
-
 
     GameNotifier.broadcastEvent(userName, GameEvent.End, newScore);
     }
